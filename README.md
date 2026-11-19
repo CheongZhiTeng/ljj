@@ -4,7 +4,7 @@ A static, bilingual social homepage built around the owner's questionnaire. The 
 
 ## Run locally
 
-Use Node.js 24 and npm.
+Use Node.js 24 and npm
 
 ```sh
 npm ci
