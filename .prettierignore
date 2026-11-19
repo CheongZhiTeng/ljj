@@ -1,0 +1,4 @@
+dist/
+package-lock.json
+src/config/profile.local.json
+browser-artifacts/

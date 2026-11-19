@@ -1,0 +1,48 @@
+{
+  "website": {
+    "title": "Personal Social Hub",
+    "subtitle": {
+      "zh": "",
+      "en": ""
+    },
+    "welcome": {
+      "zh": "",
+      "en": ""
+    },
+    "description": {
+      "zh": "个人社交主页",
+      "en": "A personal social hub"
+    }
+  },
+  "profile": {
+    "displayName": "",
+    "aliases": [],
+    "languages": [],
+    "tags": []
+  },
+  "socialMedia": [],
+  "interests": [],
+  "personality": [],
+  "music": {
+    "collection": [],
+    "playlist": [],
+    "repeat": false,
+    "shuffle": false,
+    "visualization": true
+  },
+  "quiz": [],
+  "theme": {
+    "preference": "dark"
+  },
+  "localization": {
+    "defaultLocale": "zh"
+  },
+  "visibility": {
+    "about": true,
+    "interests": true,
+    "music": true,
+    "quiz": true,
+    "social": true
+  },
+  "publicationApproved": false
+}

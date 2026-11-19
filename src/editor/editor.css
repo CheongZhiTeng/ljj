@@ -1,0 +1,46 @@
+.editor {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(calc(100% - 1.5rem), 55rem);
+  max-height: calc(100% - 1.5rem);
+  overflow: auto;
+  padding: 1.1rem;
+  color: var(--text);
+}
+.editor::backdrop {
+  background: #000a;
+}
+.editor h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.editor-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-block: 0.65rem;
+}
+.editor-input {
+  display: grid;
+  gap: 0.25rem;
+}
+.editor select,
+.editor textarea {
+  border: 1px solid var(--line);
+  background: var(--raised);
+  padding: 0.5rem;
+  border-radius: 0.45rem;
+}
+.editor select {
+  margin-inline-start: 0.4rem;
+}
+.editor textarea {
+  width: 100%;
+  min-height: 40vh;
+  font: 0.83rem/1.4 var(--mono);
+}
+.editor [role='status'] {
+  min-height: 1.5rem;
+  margin-block: 0.4rem;
+}
