@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open the localhost address printed by Vite. The personalized review profile is stored locally in `src/config/profile.local.json`. It is Git-ignored. Without that file, the app uses the safe template at `public/data/profile.json`.
+Open the localhost address printed by Vite. The personalized review profile is stored locally in `src/config/profile.local.json`. It is Git-ignored. Without that file, the app uses the public profile at `public/data/profile.json`.
 
 ```sh
 npm run typecheck
@@ -47,7 +47,7 @@ React and TypeScript run through Vite, with Tailwind CSS, Framer Motion, and Luc
 3. Choose **Apply preview** to see the changes in memory. To retain edits, use **Export JSON** and save the file as `src/config/profile.local.json`, then restart Vite. Exported drafts always have publication approval cleared.
 4. Use `visibility` to control each section independently. Empty optional sections are hidden. Delete optional fields to omit them.
 
-The public profile currently contains the generic site title and description. To personalize it, import the owner's questionnaire answers or exported profile into the local editor. Review the resulting profile, links, and quiz with the owner before copying them into the public file.
+The public profile contains Jiaozi’s questionnaire selections, Instagram account, music picks, and six quiz questions. To preview edits, import an exported profile into the local editor. Review the resulting profile, links, and quiz with the owner before copying them into the public file.
 
 ### Images
 
@@ -59,7 +59,7 @@ Use appropriately sized, optimized files and remove location and identifying met
 
 `music.collection` contains favorite artists, tracks, albums, genres, and recommendations. Link a specific official release with an HTTPS `url` when one is available. Add playable entries to `music.playlist` with a unique `id`, `src`, `title`, and `artist`, plus optional `artwork` in the image format above. For background music, add the approved track first. Use licensed files in `public/music/` or authorized, direct HTTPS audio files. Official streaming page URLs belong in the collection as links.
 
-Playback starts from an explicit visitor action. The owner’s default repeat and shuffle settings are off. A same-origin playlist uses genuine Web Audio frequency analysis. If the playlist can contain cross-origin tracks, it uses a CSS playing indicator to keep external audio playback independent of CORS and frequency analysis. Both respect reduced motion. The independent card follows the owner's placement preference. The current playlist is empty because no authorized audio, playable embed, or album artwork was supplied. The public music collection is also empty.
+Playback starts from an explicit visitor action. The owner’s default repeat and shuffle settings are off. A same-origin playlist uses genuine Web Audio frequency analysis. If the playlist can contain cross-origin tracks, it uses a CSS playing indicator to keep external audio playback independent of CORS and frequency analysis. Both respect reduced motion. The independent card follows the owner's placement preference. The current playlist is empty because no authorized audio, playable embed, or album artwork was supplied. The public music collection includes the requested background song, 瞬, as a listening pick.
 
 ### Quiz, theme, and language
 
@@ -72,7 +72,7 @@ Playback starts from an explicit visitor action. The owner’s default repeat an
 1. Have the owner review the local profile, artwork, music permissions, quiz, and share card. Review every file that would be copied to `dist/`, including static files under `public/`.
 2. Copy only the approved version to `public/data/profile.json`. Set `website.canonicalUrl` to the final HTTPS address, including a trailing slash, and set `publicationApproved` to true. Add an approved `website.previewImage` if a social preview image is wanted. A local preview image is resolved against that canonical URL. Messaging and social platforms can cache previews.
 3. Run `PAGES_DEPLOY=1 npm run build` and review the result. Release mode reads the approved public file and rejects an unapproved configuration or a missing canonical URL.
-4. After publication approval, push the approved branch. Set **Settings → Pages → Source** to **GitHub Actions**, then manually run **Deploy to GitHub Pages**. Relative asset paths work at the repository subpath and at a custom-domain root. The single page uses fragment navigation, so direct section links and refresh use the same HTML entry point.
+4. After publication approval, push the approved branch. Set **Settings → Pages → Source** to **GitHub Actions**, then manually run **Deploy to GitHub Pages** or include `[deploy pages]` in the commit message when pushing a reviewed release to `main`. Relative asset paths work at the repository subpath and at a custom-domain root. The single page uses fragment navigation, so direct section links and refresh use the same HTML entry point.
 
 Keep raw questionnaires, unapproved photos, drafts, location metadata, and private details outside Git. Files in `public/` are served directly. Git history can retain anything previously committed. The site uses no analytics or visitor accounts. The local editor is removed from the release bundles and performs no remote writes.
 

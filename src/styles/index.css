@@ -2,6 +2,11 @@
 @import './tokens.css';
 @import './sections.css';
 
+@font-face {
+  font-family: 'Jiaozi Pixel';
+  src: url('../assets/fonts/profile-pixel.woff') format('woff');
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -86,7 +91,7 @@ blockquote {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font: 800 clamp(0.94rem, 2.6vw, 1.15rem)/1.1 var(--mono);
+  font: 800 clamp(0.94rem, 2.6vw, 1.15rem)/1.1 var(--display);
   overflow-wrap: anywhere;
 }
 .wordmark svg {
@@ -167,7 +172,8 @@ blockquote {
   display: none;
 }
 .panel {
-  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -253,5 +259,21 @@ blockquote {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+.page-loading {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: 2rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .page-loading {
+    animation: star-shimmer 0.8s ease-in-out infinite alternate;
+  }
+  .avatar > span {
+    animation: star-shimmer 3s ease-in-out alternate 2;
   }
 }

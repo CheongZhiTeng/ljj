@@ -14,6 +14,7 @@ const baseline = JSON.parse(await readFile('public/data/profile.json', 'utf8'));
 const fixture = {
   ...baseline,
   publicationApproved: false,
+  personality: [],
   website: {
     title: 'Test Hub',
     subtitle: baseline.website.subtitle,
@@ -425,6 +426,22 @@ test('production assets, metadata, responsive rendering, direct refresh, and edi
   });
   try {
     await page.goto(productionUrl);
+    const published = await (
+      await page.request.get(productionUrl + 'data/profile.json')
+    ).json();
+    if (process.env.PAGES_DEPLOY === '1') {
+      assert.equal(await page.title(), published.website.title);
+      await check(
+        page.getByRole('heading', {
+          level: 1,
+          name: published.profile.displayName || published.website.title,
+          exact: true,
+        }),
+      );
+      if (published.visibility.interests && published.interests.length) {
+        await check(page.locator('#interests'));
+      }
+    }
     await check(page.getByRole('heading', { level: 1 }));
     assert.equal(
       await page.locator('meta[property="og:title"]').getAttribute('content'),

@@ -1,37 +1,316 @@
 {
   "website": {
-    "title": "Personal Social Hub",
+    "title": "WoShiJiaoZi",
     "canonicalUrl": "https://cheongzhiteng.github.io/ljj/",
     "subtitle": {
-      "zh": "",
-      "en": ""
+      "zh": "关于我",
+      "en": "About me"
     },
     "welcome": {
-      "zh": "",
-      "en": ""
+      "zh": "欢迎了解更多的我马卡巴卡",
+      "en": "Come get to know me, Makka Pakka!"
     },
     "description": {
-      "zh": "个人社交主页",
-      "en": "A personal social hub"
+      "zh": "我是饺子，也叫煎饺。来看看我喜欢的动漫、音乐，还有和朋友聚会时最想吃的东西。",
+      "en": "Meet Jiaozi through favorite anime, music, and meals with friends."
     }
   },
   "profile": {
-    "displayName": "",
-    "aliases": [],
-    "languages": [],
-    "tags": []
+    "displayName": "饺子",
+    "aliases": ["煎饺"],
+    "region": {
+      "zh": "马来西亚",
+      "en": "Malaysia"
+    },
+    "languages": [
+      {
+        "zh": "华文",
+        "en": "Chinese"
+      }
+    ],
+    "mbti": "ENFP",
+    "tags": ["充电型E人"],
+    "motto": "淡淡就好",
+    "quote": "不需要成为别人想要的自己",
+    "avatarFrame": "outline"
   },
-  "socialMedia": [],
-  "interests": [],
-  "personality": [],
+  "socialMedia": [
+    {
+      "platform": "instagram",
+      "label": "饺子",
+      "username": "jiaozi_1012",
+      "url": "https://www.instagram.com/jiaozi_1012/"
+    }
+  ],
+  "interests": [
+    {
+      "id": "hobbies",
+      "label": {
+        "zh": "闲下来喜欢",
+        "en": "In my free time"
+      },
+      "values": ["吃喝玩乐", "和朋友聚会", "Cosplay", "看戏", "玩游戏", "运动"]
+    },
+    {
+      "id": "anime",
+      "label": {
+        "zh": "最喜欢的动漫",
+        "en": "Favorite anime"
+      },
+      "values": ["EVA", "进击的巨人", "鬼灭之刃"]
+    },
+    {
+      "id": "characters",
+      "label": {
+        "zh": "喜欢的角色",
+        "en": "Favorite characters"
+      },
+      "values": ["渚薰", "真嗣（代表我的角色）"]
+    },
+    {
+      "id": "screen",
+      "label": {
+        "zh": "影视收藏",
+        "en": "On screen"
+      },
+      "values": ["电影 · 哥斯拉", "电视剧 · 庆余年"]
+    },
+    {
+      "id": "books",
+      "label": {
+        "zh": "书架上",
+        "en": "On my bookshelf"
+      },
+      "values": ["漫画 · 天才岛", "书籍 · 小王子"]
+    },
+    {
+      "id": "food",
+      "label": {
+        "zh": "一起去吃",
+        "en": "At the table"
+      },
+      "values": ["麻辣香锅", "麻辣火锅", "可乐", "蛋挞"]
+    },
+    {
+      "id": "avoid",
+      "label": {
+        "zh": "不喜欢吃",
+        "en": "Food I skip"
+      },
+      "values": ["海鲜"]
+    },
+    {
+      "id": "animals",
+      "label": {
+        "zh": "喜欢的动物",
+        "en": "Favorite animals"
+      },
+      "values": ["猫", "狗"]
+    },
+    {
+      "id": "colors",
+      "label": {
+        "zh": "喜欢的颜色",
+        "en": "Favorite color"
+      },
+      "values": ["黑色"]
+    },
+    {
+      "id": "season",
+      "label": {
+        "zh": "季节、花与节日",
+        "en": "Season, flower & festival"
+      },
+      "values": ["冬季", "雏菊", "农历新年"]
+    },
+    {
+      "id": "games",
+      "label": {
+        "zh": "游戏与虚构世界",
+        "en": "Games & fictional worlds"
+      },
+      "values": ["游戏 · 王者荣耀", "世界 · 斗气大陆"]
+    }
+  ],
+  "personality": [
+    {
+      "label": {
+        "zh": "我的性格",
+        "en": "Personality"
+      },
+      "value": "充电型外向"
+    },
+    {
+      "label": {
+        "zh": "理想的友情",
+        "en": "Friendship"
+      },
+      "value": "可以时常一起聊天、一起出门、一起吃饭"
+    },
+    {
+      "label": {
+        "zh": "聊天的话题",
+        "en": "Conversation"
+      },
+      "value": "生活"
+    },
+    {
+      "label": {
+        "zh": "想认识的朋友",
+        "en": "People I’d like to meet"
+      },
+      "value": "懂我的"
+    },
+    {
+      "label": {
+        "zh": "一个小秘密",
+        "en": "Fun fact"
+      },
+      "value": "我的头发有两个漩涡"
+    },
+    {
+      "label": {
+        "zh": "我的特长",
+        "en": "My instrument"
+      },
+      "value": "架子鼓（drum set）"
+    },
+    {
+      "label": {
+        "zh": "想学的技能",
+        "en": "Next skill"
+      },
+      "value": "吉他"
+    },
+    {
+      "label": {
+        "zh": "我的梦想",
+        "en": "My dream"
+      },
+      "value": "在 cosplay 圈认识很多人吧 hhh"
+    },
+    {
+      "label": {
+        "zh": "希望给你的印象",
+        "en": "First impression"
+      },
+      "value": "活泼友善"
+    }
+  ],
   "music": {
-    "collection": [],
+    "collection": [
+      {
+        "label": {
+          "zh": "歌手",
+          "en": "Singer"
+        },
+        "value": "郑润泽"
+      },
+      {
+        "label": {
+          "zh": "乐团",
+          "en": "Band"
+        },
+        "value": "告五人"
+      },
+      {
+        "label": {
+          "zh": "最爱的歌",
+          "en": "Favorite song"
+        },
+        "value": "某天"
+      },
+      {
+        "label": {
+          "zh": "专辑",
+          "en": "Album"
+        },
+        "value": "漩涡人生"
+      },
+      {
+        "label": {
+          "zh": "曲风",
+          "en": "Genre"
+        },
+        "value": "emo"
+      },
+      {
+        "label": {
+          "zh": "动漫主题曲",
+          "en": "Anime theme"
+        },
+        "value": "One Last Kiss"
+      },
+      {
+        "label": {
+          "zh": "推荐给朋友",
+          "en": "For a friend"
+        },
+        "value": "Time Machine"
+      },
+      {
+        "label": {
+          "zh": "想当作背景音乐的歌",
+          "en": "My pick for background music"
+        },
+        "value": "瞬"
+      }
+    ],
     "playlist": [],
     "repeat": false,
     "shuffle": false,
     "visualization": true
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "prompt": {
+        "zh": "如果约我去吃饭，点哪道菜最对味？",
+        "en": "What would I order when eating out?"
+      },
+      "options": ["清蒸鱼", "麻辣香锅", "海鲜面", "南瓜汤"],
+      "answer": 1
+    },
+    {
+      "prompt": {
+        "zh": "哪本书是我的心头好？",
+        "en": "Which book is my favorite?"
+      },
+      "options": ["夏洛的网", "秘密花园", "小王子", "彼得潘"],
+      "answer": 2
+    },
+    {
+      "prompt": {
+        "zh": "在乐队里，我最能接手哪件乐器？",
+        "en": "Which instrument can I already play?"
+      },
+      "options": ["架子鼓", "贝斯", "键盘", "吉他"],
+      "answer": 0
+    },
+    {
+      "prompt": {
+        "zh": "哪个虚构世界最吸引我？",
+        "en": "Which fictional world is my favorite?"
+      },
+      "options": ["中土大陆", "纳尼亚", "霍格沃茨", "斗气大陆"],
+      "answer": 3
+    },
+    {
+      "prompt": {
+        "zh": "我会把哪首歌推荐给朋友？",
+        "en": "Which song would I recommend to a friend?"
+      },
+      "options": ["某天", "Time Machine", "One Last Kiss", "瞬"],
+      "answer": 1
+    },
+    {
+      "prompt": {
+        "zh": "最想和我一起过哪个我喜欢的节日？",
+        "en": "Which holiday is my favorite?"
+      },
+      "options": ["端午节", "中秋节", "农历新年", "元宵节"],
+      "answer": 2
+    }
+  ],
   "theme": {
     "preference": "dark"
   },
