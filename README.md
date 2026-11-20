@@ -1,6 +1,6 @@
 # Personal Social Hub
 
-A static, bilingual social homepage built around the owner's questionnaire. The local review version includes a profile, Instagram, favorite things, music picks, and a short personal quiz. The design pairs a black and deep-blue sky with a square profile frame, star motifs, and a separate daylight palette.
+A static, bilingual social homepage built around the owner's questionnaire. The homepage supports a profile, Instagram, favorite things, music picks, and a short personal quiz. The design pairs a black and deep-blue sky with a square profile frame, star motifs, and a separate daylight palette.
 
 ## Run locally
 
@@ -47,7 +47,7 @@ React and TypeScript run through Vite, with Tailwind CSS, Framer Motion, and Luc
 3. Choose **Apply preview** to see the changes in memory. To retain edits, use **Export JSON** and save the file as `src/config/profile.local.json`, then restart Vite. Exported drafts always have publication approval cleared.
 4. Use `visibility` to control each section independently. Empty optional sections are hidden. Delete optional fields to omit them.
 
-The current review uses the supplied nickname, alias, country, language, MBTI, site copy, and approved-for-sharing Instagram handle. The Instagram URL is derived from the handle. Quiz prompts and distractors are editorial additions based on questionnaire preferences. The review omits some optional answers and should be checked by the owner before any publication.
+The public profile currently contains the generic site title and description. To personalize it, import the owner's questionnaire answers or exported profile into the local editor. Review the resulting profile, links, and quiz with the owner before copying them into the public file.
 
 ### Images
 
@@ -59,7 +59,7 @@ Use appropriately sized, optimized files and remove location and identifying met
 
 `music.collection` contains favorite artists, tracks, albums, genres, and recommendations. Link a specific official release with an HTTPS `url` when one is available. Add playable entries to `music.playlist` with a unique `id`, `src`, `title`, and `artist`, plus optional `artwork` in the image format above. For background music, add the approved track first. Use licensed files in `public/music/` or authorized, direct HTTPS audio files. Official streaming page URLs belong in the collection as links.
 
-Playback starts from an explicit visitor action. The owner’s default repeat and shuffle settings are off. A same-origin playlist uses genuine Web Audio frequency analysis. If the playlist can contain cross-origin tracks, it uses a CSS playing indicator to keep external audio playback independent of CORS and frequency analysis. Both respect reduced motion. The independent card follows the owner's placement preference. The current playlist is empty because no authorized audio, playable embed, or album artwork was supplied. The requested background track appears as a music pick only.
+Playback starts from an explicit visitor action. The owner’s default repeat and shuffle settings are off. A same-origin playlist uses genuine Web Audio frequency analysis. If the playlist can contain cross-origin tracks, it uses a CSS playing indicator to keep external audio playback independent of CORS and frequency analysis. Both respect reduced motion. The independent card follows the owner's placement preference. The current playlist is empty because no authorized audio, playable embed, or album artwork was supplied. The public music collection is also empty.
 
 ### Quiz, theme, and language
 
@@ -78,4 +78,4 @@ Keep raw questionnaires, unapproved photos, drafts, location metadata, and priva
 
 ## Content awaiting the owner
 
-The questionnaire left the avatar, banner, bio, and long introduction blank. The layout supports these fields and omits the missing content. A share preview image, canonical URL, licensed audio or official playable source for the requested background track, and approved album art remain optional assets to supply before the corresponding content can appear.
+The questionnaire left the avatar, banner, bio, and long introduction blank. The layout supports these fields and omits the missing content. The public profile already sets the GitHub Pages canonical URL. A share preview image, licensed audio, and approved album art can be added when available.
