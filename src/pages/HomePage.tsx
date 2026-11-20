@@ -1,9 +1,4 @@
-import {
-  Disc3,
-  HeartHandshake,
-  MessageCircleQuestion,
-  Stars,
-} from 'lucide-react';
+import { Disc3, Contact, ScanLine, Boxes } from 'lucide-react';
 import { usePreferences } from '../contexts/preferences';
 import type { ProfileConfig } from '../types/profile';
 import { Interests } from '../components/interests/Interests';
@@ -56,7 +51,7 @@ export function HomePage({
           </div>
         )}
         {about && (
-          <Section id="about" title={t('aboutTitle')} icon={HeartHandshake}>
+          <Section id="about" title={t('aboutTitle')} icon={Contact}>
             <div className="about-grid">
               {(profile.quote || localize(profile.about)) && (
                 <div className="panel quote-card">
@@ -78,7 +73,7 @@ export function HomePage({
           </Section>
         )}
         {interests && (
-          <Section id="interests" title={t('interestsTitle')} icon={Stars}>
+          <Section id="interests" title={t('interestsTitle')} icon={Boxes}>
             <Interests groups={config.interests} />
           </Section>
         )}
@@ -88,11 +83,7 @@ export function HomePage({
           </Section>
         )}
         {quiz && (
-          <Section
-            id="quiz"
-            title={t('quizTitle')}
-            icon={MessageCircleQuestion}
-          >
+          <Section id="quiz" title={t('quizTitle')} icon={ScanLine}>
             <Quiz questions={config.quiz} key={JSON.stringify(config.quiz)} />
           </Section>
         )}

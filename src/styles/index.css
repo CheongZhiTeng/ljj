@@ -15,7 +15,14 @@ body {
   min-height: 100vh;
   font: 1rem/1.65 var(--body);
   color: var(--text);
-  background: var(--theme-page) var(--page);
+  background:
+    linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--line) 14%, transparent) 1px,
+        transparent 1px
+      )
+      50% 0 / 3rem 3rem,
+    var(--theme-page) var(--page);
   transition:
     background-color 220ms ease,
     color 220ms ease;
@@ -76,6 +83,7 @@ blockquote {
   clip-path: none;
 }
 .site-header {
+  border-top: 3px solid var(--accent);
   border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--page) 77%, transparent);
 }
@@ -96,6 +104,9 @@ blockquote {
 }
 .wordmark svg {
   color: var(--accent);
+  filter: drop-shadow(
+    0 0 8px color-mix(in srgb, var(--accent) 30%, transparent)
+  );
 }
 .nav-links,
 .preferences,
@@ -117,7 +128,7 @@ blockquote {
   font-weight: 600;
 }
 .nav-links a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 .button,
 .select-control {
@@ -128,7 +139,7 @@ blockquote {
   min-height: 44px;
   padding: 0.55rem 0.85rem;
   border: 1px solid var(--line);
-  border-radius: 0.65rem;
+  border-radius: var(--radius);
   color: var(--text);
   background: var(--raised);
   font-size: 0.875rem;
@@ -150,6 +161,7 @@ blockquote {
   color: var(--on-accent);
   background: var(--accent-strong);
   border-color: var(--accent-strong);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--accent) 24%, transparent);
 }
 .icon-button {
   width: 44px;
@@ -172,8 +184,7 @@ blockquote {
   display: none;
 }
 .panel {
-  background: color-mix(in srgb, var(--surface) 78%, transparent);
-  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -191,23 +202,36 @@ blockquote {
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
+.section-heading::after {
+  content: '';
+  height: 0.45rem;
+  flex: 1;
+  margin-inline-start: 0.4rem;
+  border-block: 1px solid var(--line);
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0 5px,
+    color-mix(in srgb, var(--hero-edge) 45%, transparent) 5px 9px
+  );
+}
 .heading-icon {
   display: grid;
   place-items: center;
   width: 2.5rem;
   height: 2.5rem;
   border: 1px solid var(--line);
-  border-radius: 0.7rem;
+  border-radius: var(--radius);
   background: var(--raised);
   color: var(--accent);
 }
 .section-heading h2 {
-  font: 850 clamp(1.6rem, 4.6vw, 2.45rem)/1.1 var(--display);
+  font: 850 clamp(1.7rem, 4.6vw, 2.65rem)/1.1 var(--display);
   letter-spacing: -0.025em;
 }
 .site-footer {
   border-top: 1px solid var(--line);
   margin-top: clamp(3rem, 8vw, 6rem);
+  background: var(--surface);
 }
 .footer-row {
   min-height: 5rem;
@@ -271,9 +295,9 @@ blockquote {
 }
 @media (prefers-reduced-motion: no-preference) {
   .page-loading {
-    animation: star-shimmer 0.8s ease-in-out infinite alternate;
+    animation: signal-pulse 0.8s ease-in-out infinite alternate;
   }
   .avatar > span {
-    animation: star-shimmer 3s ease-in-out alternate 2;
+    animation: signal-pulse 3s ease-in-out alternate 2;
   }
 }

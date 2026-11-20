@@ -1,4 +1,4 @@
-import { ArrowUp, Languages, Menu, MoonStar, Sparkle, X } from 'lucide-react';
+import { ArrowUp, Languages, Menu, Moon, RadioTower, X } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 import { usePreferences } from '../../contexts/preferences';
 import type { ThemePreference } from '../../types/profile';
@@ -28,7 +28,7 @@ export function SiteLayout({
         <Container>
           <div className="header-row">
             <a className="wordmark" href="#top">
-              <Sparkle size={23} aria-hidden="true" />
+              <RadioTower size={23} aria-hidden="true" />
               {title}
             </a>
             <button
@@ -65,7 +65,7 @@ export function SiteLayout({
             </nav>
             <div className="preferences">
               <label className="select-control">
-                <MoonStar size={16} aria-hidden="true" />
+                <Moon size={16} aria-hidden="true" />
                 <select
                   aria-label={t('theme')}
                   value={theme}
@@ -99,7 +99,7 @@ export function SiteLayout({
         <Container>
           <div className="footer-row">
             <span className="wordmark">
-              <Sparkle size={18} aria-hidden="true" />
+              <RadioTower size={18} aria-hidden="true" />
               {title}
             </span>
             <div className="button-row">

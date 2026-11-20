@@ -1,6 +1,6 @@
 # Personal Social Hub
 
-A static, bilingual social homepage built around the owner's questionnaire. The homepage supports a profile, Instagram, favorite things, music picks, and a short personal quiz. The design pairs a black and deep-blue sky with a square profile frame, star motifs, and a separate daylight palette.
+A static, bilingual social homepage built around the owner's questionnaire. The homepage supports a profile, Instagram, favorite things, music picks, and a short personal quiz. The design pairs an orange-red skyline with a square profile frame, warning-stripe details, and a separate daylight palette.
 
 ## Run locally
 
@@ -53,7 +53,7 @@ The public profile contains Jiaozi’s questionnaire selections, Instagram accou
 
 Put authorized images in `public/images/`. Set `profile.avatar`, `profile.banner`, or `website.previewImage` to objects such as `{ "src": "images/avatar.webp", "alt": { "zh": "头像", "en": "Profile avatar" } }`. Use a consistent, readable filename. The square avatar preserves the original aspect ratio. Banner images fill the hero panel and may crop at its edges. Animated GIF or WebP avatars can be referenced if approved. Provide a static image if motion must be avoided across browsers.
 
-Use appropriately sized, optimized files and remove location and identifying metadata before copying them into `public/`. Placeholder artwork is made from site typography and CSS. The avatar initial and star field are used until the owner provides approved images.
+Use appropriately sized, optimized files and remove location and identifying metadata before copying them into `public/`. Placeholder artwork is made from site typography and CSS. The avatar initial and skyline are used until the owner provides approved images.
 
 ### Music
 

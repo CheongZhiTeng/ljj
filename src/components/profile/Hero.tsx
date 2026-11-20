@@ -1,4 +1,4 @@
-import { ArrowDown, Globe2, MapPin, Sparkle } from 'lucide-react';
+import { ArrowDown, Globe2, MapPin, Radio } from 'lucide-react';
 import { usePreferences } from '../../contexts/preferences';
 import type { ProfileConfig } from '../../types/profile';
 import { Sharing } from '../social/Sharing';
@@ -19,7 +19,7 @@ export function Hero({
       <div className="hero-copy">
         {localize(website.subtitle) && (
           <p className="hero-kicker">
-            <Sparkle size={15} aria-hidden="true" />
+            <Radio size={15} aria-hidden="true" />
             {localize(website.subtitle)}
           </p>
         )}
@@ -66,21 +66,11 @@ export function Hero({
         <div className="hero-banner">
           <SafeImage image={profile.banner} fallback={null} eager />
         </div>
-        <div className="orbit orbit-one" aria-hidden="true" />
-        <div className="orbit orbit-two" aria-hidden="true" />
-        <div className="orbit orbit-three" aria-hidden="true" />
-        <span className="orbit-star star-one" aria-hidden="true">
-          ✦
-        </span>
-        <span className="orbit-star star-two" aria-hidden="true">
-          ✦
-        </span>
-        <span className="orbit-star star-three" aria-hidden="true">
-          ✧
-        </span>
-        <span className="orbit-star star-four" aria-hidden="true">
-          ✦
-        </span>
+        <div className="impact-scene" aria-hidden="true">
+          <div className="impact-sun" />
+          <div className="impact-skyline" />
+        </div>
+        <div className="impact-frame" aria-hidden="true" />
         <div className={'avatar avatar-' + (profile.avatarFrame ?? 'plain')}>
           <SafeImage
             image={profile.avatar}
