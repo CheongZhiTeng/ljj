@@ -1,6 +1,7 @@
 {
   "website": {
     "title": "Personal Social Hub",
+    "canonicalUrl": "https://cheongzhiteng.github.io/ljj/",
     "subtitle": {
       "zh": "",
       "en": ""
@@ -44,5 +45,5 @@
     "quiz": true,
     "social": true
   },
-  "publicationApproved": false
+  "publicationApproved": true
 }

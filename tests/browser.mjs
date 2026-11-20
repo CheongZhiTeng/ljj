@@ -9,11 +9,17 @@ import { createServer } from 'vite';
 
 const testPort = 5192;
 const origin = 'http://127.0.0.1:' + testPort;
+const productionPath = '/ljj/';
 const baseline = JSON.parse(await readFile('public/data/profile.json', 'utf8'));
 const fixture = {
   ...baseline,
   publicationApproved: false,
-  website: { ...baseline.website, title: 'Test Hub' },
+  website: {
+    title: 'Test Hub',
+    subtitle: baseline.website.subtitle,
+    welcome: baseline.website.welcome,
+    description: baseline.website.description,
+  },
   profile: {
     displayName: 'Test Profile',
     aliases: ['Alias'],
@@ -93,10 +99,10 @@ before(async () => {
   };
   production = createHttpServer(async (request, response) => {
     const path = new URL(request.url, 'http://localhost').pathname;
-    const relative = path.slice('/Profile-LJJ/'.length) || 'index.html';
+    const relative = path.slice(productionPath.length) || 'index.html';
     const file = resolve(root, relative);
     try {
-      if (!path.startsWith('/Profile-LJJ/') || !file.startsWith(root + sep))
+      if (!path.startsWith(productionPath) || !file.startsWith(root + sep))
         throw new Error('Outside test mount');
       const data = await readFile(file);
       response.writeHead(200, {
@@ -111,7 +117,7 @@ before(async () => {
   production.listen(0, '127.0.0.1');
   await once(production, 'listening');
   productionUrl =
-    'http://127.0.0.1:' + production.address().port + '/Profile-LJJ/';
+    'http://127.0.0.1:' + production.address().port + productionPath;
 });
 
 after(async () => {
